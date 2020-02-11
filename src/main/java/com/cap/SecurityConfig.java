@@ -48,8 +48,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 				// URLs matching for access rights
 		
 				.antMatchers("/login-user").hasAnyAuthority("USER")//.access("hasRole('USER')")
-				.antMatchers("/login-seller","/login-seller/newproduct").permitAll()//.hasAnyAuthority("SELLER")//.access("hasRole('SELLER')")
+				.antMatchers("/login-seller").permitAll()//.hasAnyAuthority("SELLER")//.access("hasRole('SELLER')")
 				.antMatchers("/adminPage").hasAnyAuthority("ADMIN")//.access("hasRole('ADMIN')")
+				.antMatchers("/login-seller/newproduct","/login-user/cartitems/savetocart","/login-user/cartitems","/login-user/viewcart","/login-user/buyitems","/deleteitemfromcart","/deleteall","/gotohome").permitAll()
 		
 				.antMatchers("/resources/**","/static/**", "/css/**", "/js/**", "/images/**","/main","/welcome", "/login", "/login-user", "/register", "/save-user", "/seller-welcome", "/registerseller", "/save-seller", "/loginseller", "/login-seller").permitAll()
 				
