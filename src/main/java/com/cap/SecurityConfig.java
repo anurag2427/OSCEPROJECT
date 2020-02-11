@@ -56,6 +56,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		
 				.antMatchers("/delete-seller","/edit-seller","/login-seller/newproduct/saveproduct","/login-seller/deleteproduct").permitAll()
 			
+				.antMatchers("/delete-user","/loginadmin","/showbuyer").permitAll()
+			
 				.antMatchers("/resources/**","/static/**", "/css/**", "/js/**", "/images/**","/main","/welcome", "/login", "/login-user", "/register", "/save-user", "/seller-welcome", "/registerseller", "/save-seller", "/loginseller", "/login-seller").permitAll()
 				
 				
